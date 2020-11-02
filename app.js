@@ -1,5 +1,27 @@
-var createError = require('http-errors');
+const mongoose = require('mongoose')
+const morgan = require('morgan')
+const bodyParser = require('body-parser')
 var express = require('express');
+
+
+var app = express();
+
+mongoose.connect('mongodb://localhost:27017/testdb')
+const db = mongoose.connection
+
+db.on('error',(err) => {
+  console.log(err)
+})
+
+db.once('open',() =>{
+  console.log('Database Connection Established!')
+})
+
+app.use(morgan('dev'))
+app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.json())
+
+var createError = require('http-errors');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
@@ -7,7 +29,9 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
+const AuthRoute = require('./routes/auth')
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -37,5 +61,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+app.use('/api',AuthRoute)  
 
 module.exports = app;

@@ -1,12 +1,15 @@
-//Paste in views/index.ejs
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Gym Website Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+	<link rel="stylesheet" href="CSS/styles.css">
   <style>
     .wow:first-child {
       visibility: hidden;
@@ -33,13 +36,14 @@
  	 			<li><a href="#service">Services</a></li>
  	 			<li><a href="#classes">Classes</a></li>
  	 			<li><a href="#schedule">Schedule</a></li>
- 	 			<li><a href="#price">Price</a></li>
  	 			<li><a href="#contact">Contact</a></li>
- 	 		</ul>
+				<li><a style="color:white;" id="loogin" ><span class="fa fa-sign-in" style="color:white;"></span> Login </a></li>
+			</ul>
  	 	</div>
  	 </div>
  </header>
  <!-- End Header  -->
+
 
   <!-- Start Home -->
   <section class="home wow flash" id="home">
@@ -68,7 +72,7 @@
   	  	  	   	   	   </div>
                        <div class="text">
                        	   <h4>Free Consultation</h4>
-                       	   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
+                       	   <p>We Provide free consultation to our new and existing customers via email or phone. Send us a message now</p>
                        </div>
   	  	  	   	   </div>
   	  	  	   </div>
@@ -79,8 +83,8 @@
   	  	  	   	   	   </div>
                        <div class="text">
                        	   <h4>Best Training</h4>
-                       	   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                       </div>
+							<p>We have professional trainers for you that will help you, assist you and guide you throughout your journey with us. Can't wait to have you starting with us today.</p>
+						</div>
   	  	  	   	   </div>
   	  	  	   </div>
   	  	  	   <div class="box wow bounceInUp" data-wow-delay="0.4s">
@@ -90,8 +94,8 @@
   	  	  	   	   	   </div>
                        <div class="text">
                        	   <h4>Build Perfect Body</h4>
-                       	   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                       </div>
+							<p>You will get your routine according to your preferences whatever you decide we will help you achieve it. Our trainers are enthusiastic, welcoming and polite </p>
+						</div>
   	  	  	   	   </div>
   	  	  	   </div>
   	  	  </div>
@@ -106,9 +110,21 @@
  		 <div class="content">
  		 	  <div class="text box wow slideInLeft">
                   <h2>Services</h2>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
-                  <a href="" class="btn">Start Now</a>
+				<p> <b>Cardio Services</b>
+					Cardio vascular exercises help you strengthen the heart and lungs, the critical components of your body and keep you in top of your Physical and Mental Health. What’s more, it helps you manage your weight too.
+					This section has the state of the art computerized equipment including Treadmills, Cross Trainers and variety of bikes.
+					
+					<b>Strength Training</b>
+					Weight Training exercises help you strengthen and tone-up your muscles, keep you in shape and improve your posture.
+					This section has ample state of the art improved single stations gyms coupled with host of additional free weights and the most needed guidance to help you out.
+					
+					<b>Group Fitness Class</b>
+					We have Professionally Certified and Qualified Personal Trainers who can pay Special Attention to an individuals’ need and expectation and are in groups
+					
+					<b>Lockers</b>
+					Lockers are available to keep your personal belonging’s safe while you unwind and workout to re-energize yourself. As needed, clean and fresh towels are also provided.
+					With the help and guidance of our Expert Team of Trainers and Nutritionists, we provide complimentary Diet Counseling sessions to all our customers in order to help them achieve their desired results.  Eating Healthy is the best way to stay Fit and Young.</p>	
+				  <a id="reserving" class="btn">Start Now</a>
  		 	  </div>
  		 	  <div class="accordian box wow slideInRight">
  		 	  	    <div class="accordian-container active">
@@ -117,8 +133,10 @@
  		 	  	    		<span class="fa fa-angle-down"></span>
  		 	  	    	</div>
  		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
+							<p>Cardio vascular exercises help you strengthen the heart and lungs, the critical components of your body and keep you in top of your Physical and Mental Health. What’s more, it helps you manage your weight too.
+								This section has the state of the art computerized equipment including Treadmills, Cross Trainers and variety of bikes.
+			</p>
+						</div>
  		 	  	    </div>
  		 	  	    <div class="accordian-container">
  		 	  	    	<div class="head">
@@ -126,8 +144,10 @@
  		 	  	    		<span class="fa fa-angle-up"></span>
  		 	  	    	</div>
  		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
+							<p>Weight Training exercises help you strengthen and tone-up your muscles, keep you in shape and improve your posture.
+								This section has ample state of the art improved single stations gyms coupled with host of additional free weights and the most needed guidance to help you out.
+			</p>
+						</div>
  		 	  	    </div>
  		 	  	    <div class="accordian-container">
  		 	  	    	<div class="head">
@@ -135,8 +155,9 @@
  		 	  	    		<span class="fa fa-angle-up"></span>
  		 	  	    	</div>
  		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
+							<p>	We have Professionally Certified and Qualified Personal Trainers who can pay Special Attention to an individuals’ need and expectation and are in groups
+							</p>
+						</div>
  		 	  	    </div>
  		 	  	    <div class="accordian-container">
  		 	  	    	<div class="head">
@@ -144,8 +165,10 @@
  		 	  	    		<span class="fa fa-angle-up"></span>
  		 	  	    	</div>
  		 	  	    	<div class="body">
- 		 	  	    		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries</p>
- 		 	  	    	</div>
+							<p>	Lockers are available to keep your personal belonging’s safe while you unwind and workout to re-energize yourself. As needed, clean and fresh towels are also provided.
+								With the help and guidance of our Expert Team of Trainers and Nutritionists, we provide complimentary Diet Counseling sessions to all our customers in order to help them achieve their desired results.  Eating Healthy is the best way to stay Fit and Young.</p>	
+			</p>
+						</div>
  		 	  	    </div>
  		 	  </div>
  		 </div>
@@ -162,32 +185,19 @@
 		 	  </div>
 		 	  <div class="box text wow slideInRight">
 		 	  	 <h2>Our Classes</h2>
-		 	  	 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-		 	  	<div class="class-items">
+				<p>We provide different classes according to our customers preferences, In different classes there are people with the same catagories involved</p>
+					<div class="class-items">
 		 	  	 <div class="item wow bounceInUp">
                      <div class="item-img">
                      	 <img src=" images/class1.jpg" alt="classes" />
                      	 <div class="price">
-                     	 	 $99
+                     	 	 $60
                      	 </div>
                      </div>
                      <div class="item-text">
                      	  <h4>Stretching Training</h4>
-                     	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                     	  <p>All of your trainers will guide you through stretching training every day and we hope that you keep a good atmosphere in there.</p>
                      	  <a href="">Get Details</a>
-                     </div>
-		 	  	 </div>
-		 	  	 <div class="item wow bounceInUp">
-                     <div class="item-text">
-                     	  <h4>Stretching Training</h4>
-                     	  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                     	  <a href="">Get Details</a>
-                     </div>
-                     <div class="item-img">
-                     	 <img src=" images/class1.jpg" alt="classes" />
-                     	 <div class="price">
-                     	 	 $99
-                     	 </div>
                      </div>
 		 	  	 </div>
 		 	  	</div>
@@ -203,8 +213,8 @@
  		 <div class="content">
  		 	  <div class="box text wow slideInLeft">
  		 	  	 <h2>Start Your Training Today</h2>
- 		 	  	 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
- 		 	  	 <a href="" class="btn">Start Now</a>
+					<p>Its not someday I will join, Its today I will join. Start today and see you life change </p>
+				<a id="reserving1" class="btn">Start Now</a>
  		 	  </div>
  		 	  <div class="box img wow slideInRight">
  		 	  	 <img src=" images/gallery4.jpg" alt="start today" />
@@ -222,8 +232,8 @@
   	 	  	   <div class="box text wow slideInLeft">
   	 	  	   	   <h2>Classes Schedule</h2>
   	 	  	   	   <p>
-  	 	  	   	   	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,
-  	 	  	   	   </p>
+					  Our Plan can be customised according to an individuals needs but here it the most common schedule one average wanna be body builder has 
+					</p>
   	 	  	   	   <img src=" images/schedule1.png" alt="schedule" />
   	 	  	   </div>
   	 	  	   <div class="box timing wow slideInRight">
@@ -231,39 +241,39 @@
                    	 <tbody>
                    	 	<tr>
                    	 		<td class="day">Monday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
+                   	 		<td><strong>6:00 AM</strong></td>
+                   	 		<td>Chest <br/> 6:00 to 7:00 AM</td>
                    	 		<td>Room No:210</td>
                    	 	</tr>
                    	 	<tr>
                    	 		<td class="day">Tuesday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
+                   	 		<td><strong>6:00 AM</strong></td>
+                   	 		<td>Biceps <br/> 6:00 to 7:00 AM</td>
+                   	 		<td>Room No:211</td>
                    	 	</tr>
                    	 	<tr>
                    	 		<td class="day">Wednesday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
+                   	 		<td><strong>6:00 AM</strong></td>
+                   	 		<td>Triceps <br/> 6:00 to 7:00 AM</td>
+                   	 		<td>Room No:212</td>
                    	 	</tr>
                    	 	<tr>
                    	 		<td class="day">Thursday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
+                   	 		<td><strong>6:00 AM</strong></td>
+                   	 		<td>Shoulders <br/> 6:00 to 7:00 AM</td>
+                   	 		<td>Room No:213</td>
                    	 	</tr>
                    	 	<tr>
                    	 		<td class="day">Friday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
+                   	 		<td><strong>6:00 AM</strong></td>
+                   	 		<td>Back <br/> 6:00 to 7:00 AM</td>
+                   	 		<td>Room No:214</td>
                    	 	</tr>
                    	 	<tr>
                    	 		<td class="day">Saturday</td>
-                   	 		<td><strong>9:00 AM</strong></td>
-                   	 		<td>Body Building <br/> 9:00 to 10:00 AM</td>
-                   	 		<td>Room No:210</td>
+                   	 		<td><strong>6:00 AM</strong></td>
+                   	 		<td>Legs <br/> 6:00 to 7:00 AM</td>
+                   	 		<td>Room No:215</td>
                    	 	</tr>
                    	 </tbody>
                    </table>
@@ -293,84 +303,18 @@
   </section>
 <!-- End Gallery -->
 
- <!-- Start Price -->
-  <section class="price-package" id="price">
-  	 <div class="container">
-  	 	  <h2>Choose Your Package</h2>
-  	 	  <p class="title-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-  	 	  <div class="content">
-  	 	  	  <div class="box wow bounceInUp">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  $59/Month
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src=" images/price1.jpg" alt="price" />
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>Body Building Training</h3>
-  	 	  	  	  	   	  <p>Get Free WiFi</p>
-  	 	  	  	  	   	  <p>Month to Month</p>
-  	 	  	  	  	   	  <p>No Time Restrictions</p>
-  	 	  	  	  	   	  <p>Gym and Cardio</p>
-  	 	  	  	  	   	  <p>Service Locker Rooms</p>
-  	 	  	  	  	   	  <a href="" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div>
-  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.2s">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  $69/Month
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src=" images/price2.jpg" alt="price" />
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>Body Building Training</h3>
-  	 	  	  	  	   	  <p>Get Free WiFi</p>
-  	 	  	  	  	   	  <p>Month to Month</p>
-  	 	  	  	  	   	  <p>No Time Restrictions</p>
-  	 	  	  	  	   	  <p>Gym and Cardio</p>
-  	 	  	  	  	   	  <p>Service Locker Rooms</p>
-  	 	  	  	  	   	  <a href="" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div>
-  	 	  	  <div class="box wow bounceInUp" data-wow-delay="0.4s">
-  	 	  	  	  <div class="inner">
-  	 	  	  	  	   <div class="price-tag">
-  	 	  	  	  	   	  $99/Month
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="img">
-  	 	  	  	  	   	 <img src="images/price3.jpg" alt="price" />
-  	 	  	  	  	   </div>
-  	 	  	  	  	   <div class="text">
-  	 	  	  	  	   	  <h3>Body Building Training</h3>
-  	 	  	  	  	   	  <p>Get Free WiFi</p>
-  	 	  	  	  	   	  <p>Month to Month</p>
-  	 	  	  	  	   	  <p>No Time Restrictions</p>
-  	 	  	  	  	   	  <p>Gym and Cardio</p>
-  	 	  	  	  	   	  <p>Service Locker Rooms</p>
-  	 	  	  	  	   	  <a href="" class="btn">Join Now</a>
-  	 	  	  	  	   </div>
-  	 	  	  	  </div>
-  	 	  	  </div>
-  	 	  </div>
-  	 </div>
-  </section>
  <!-- End Price -->
 
  <!-- Start Contact -->
-  <section class="contact" id="contact">
+  <section class="mt-2 contact" id="contact">
      <div class="container">
         <div class="content">
             <div class="box form wow slideInLeft">
-               <form action="/" method="POST">
-                  <input type="text" name= "name" placeholder="Enter Name">
-                  <input type="text" name= "email" placeholder="Enter Email">
-                  <input type="number" name= "phone" placeholder="Enter Mobile">
-                  <textarea placeholder="Enter Message" name="message"></textarea>
+               <form  id="myForm" action="/" method="POST">
+                  <input type="text" id="name" name= "name" placeholder="Enter Name" required>
+                  <input type="text" id="email" name= "email" placeholder="Enter Email" required>
+                  <input type="number" id="phone" name= "phone" placeholder="Enter Mobile" required>
+                  <textarea placeholder="Enter Message" id="message" name="message" required></textarea>
                   <button class="submit" type="submit">Send Message</button>
                </form> 
             </div>
@@ -392,18 +336,110 @@
                   </div>
 
                   <div class="copy">
-                      PowerBy &copy; The WebShala
+                      developer &copy; miwsyed
                   </div>
             </div>
         </div>
      </div>
   </section>
  <!-- End Contact -->
+	<div id="loginModal" class="modal fade" role="dialog">
+		<div class="modal-dialog modal-lg" role="content">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" >Login </h4>
+					<button type="button" id="close1" class="close" >&times;</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-row">
+							<div class="form-group col-sm-4">
+									<label class="sr-only" for="exampleInputEmail3">Email address</label>
+									<input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3" placeholder="Enter email">
+							</div>
+							<div class="form-group col-sm-4">
+								<label class="sr-only" for="exampleInputPassword3">Password</label>
+								<input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3" placeholder="Password">
+							</div>
+							<div class="col-sm-auto">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox">
+									<label class="form-check-label"> Remember me
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="form-row">
+							<button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+							<button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
+<div id="scrolly" class="modal fade" role="dialog" >
+		<div class="modal-dialog modal-lg modal-dialog-centered" role="content">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title"><b>Sign up</b> </h4>
+					<button type="button" id="close" class="close" >&times;</button>
+				</div>
+				<div class="modal-body">
+					<form id="regform" action="/" method="POST">
+						<div class="form-row">
+							<div class="form-group col-md-2">
+									<label for="name"> <b>Full Name </b> </label>
+							</div>
+							<div class="form-group col-md-10">
+								<input type="text" id="username" name="username" value="" required>							  
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-2">
+									<label for="email"> <b>Email </b> </label>
+							</div>
+							<div class="form-group col-md-10">
+								<input type="text" id="email" name="email" value="" require>							  
+							</div>
+						</div>
 
+						<div class="form-row">
+							<div class="form-group col-md-2">
+								<label for="phonenumber"> <b>Phone Number </b> </label>
+							</div>
+							<div class="form-group col-md-10">
+								<input type="number" id="phonenumber" name="phonenumber" value="" require>							  
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="form-group col-md-2">
+									<label for="password"> <b>Password </b> </label>
+							</div>
+							<div class="form-group col-md-10">
+								<input type="password" id="password" name="password" value="" require>							  
+							</div>
+						</div>
+
+					   <div class="form-row ">
+					 <div class="form-group offset-md-2">
+					   <button type="button" class="btn btn-secondary btn-sm mr-1" >Cancel</button>
+						 <button type="submit" class="btn btn-primary btn-sm mr-1">Submit</button>
+					 </div>
+					   </div>
+					</form>
+
+					</div>
+
+				</div>
+			</div>
+</div>
 
  <!-- jquery -->
-
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
 	$(document).ready(function(){
@@ -452,8 +488,70 @@
         offset:       0,
       }
     );
-    wow.init();
+	wow.init();
+	document.getElementById("myForm").onsubmit = function() {myFunction()};
+
+	function myFunction() 
+	{
+		
+	alert("Your response has been Sent!");
+		
+	}
+
+	document.getElementById("regform").onsubmit = function() {myFunctionn()};
+
+	function myFunctionn() 
+	{
+		
+	alert("Your response has been Sent!");
+		
+	}
+	
+
+	$(document).ready(function(){     
+
+       $('#reserving').click(function()
+     {
+       $('#scrolly').modal({
+         backdrop: 'static',
+         keyboard: false
+         })
+
+	 })
+	 $('#reserving1').click(function()
+     {
+       $('#scrolly').modal({
+         backdrop: 'static',
+         keyboard: false
+         })
+
+     })
+
+      $('#loogin').click(function()
+        {
+          $('#loginModal').modal({
+            backdrop: 'static',
+            keyboard: false
+            })
+        })
+
+        $('#close').click(function(){
+          $('#scrolly').modal('hide');
+        })
+
+        $('#close1').click(function(){
+          $('#loginModal').modal('hide');
+        })
+
+    });
+
+
   </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/scripts.js" > </script>
 </body>
 </html>
 

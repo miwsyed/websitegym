@@ -13,6 +13,10 @@ router.post('/', (req, res) => {
   const phone = req.body.phone;
   const message = req.body.message;
 
-  res.send('Name: ' + name + '</br>Email: ' + email + '</br>Phone: ' + phone + '</br>Messsage: ' +  message);
+
+  
+  res.redirect('/');
+  res.end();
+
 })
 module.exports = router;

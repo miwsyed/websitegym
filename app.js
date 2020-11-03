@@ -1,3 +1,4 @@
+const mongo = require('mongodb')
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
@@ -5,15 +6,15 @@ var express = require('express');
 
 
 var app = express();
-
-mongoose.connect('mongodb://localhost:27017/testdb')
-const db = mongoose.connection
-
-db.on('error',(err) => {
+const EmployeeRoute = require('./routes/employee')
+mongoose.connect('mongodb://localhost:27017/testdb',{useNewUrlParser:true , useUnifiedTopology :true})
+mongoose.connection.on('error',(err) => {
   console.log(err)
 })
 
-db.once('open',() =>{
+
+
+mongoose.connection.on('open',() =>{
   console.log('Database Connection Established!')
 })
 
@@ -63,5 +64,9 @@ app.use(function(err, req, res, next) {
 });
 
 app.use('/api',AuthRoute)  
+app.use('/api',EmployeeRoute)  
+
+
+
 
 module.exports = app;

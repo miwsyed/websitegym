@@ -2,6 +2,7 @@
 const mongoose = require('mongoose')
 const User = mongoose.model("User")
 const bcrypt = require('bcryptjs')
+const jwt = require('jsonwebtoken')
 
 var express = require('express');
 var router = express.Router();
@@ -11,6 +12,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+
+//For Registering
+
 router.post('/', (req, res) => {
 
    const username = req.body.username;
@@ -49,7 +53,47 @@ router.post('/', (req, res) => {
 })
     
      
+})
+
+
+
+
+//For Login
+
+router.post('/login', (req, res) => {
+  const username = req.body.username
+  const password = req.body.password
+
+  User.findOne({$or: [{email:username},{phonenumber:username}]})
+  .then(user => {
+      if(user){
+          bcrypt.compare(password, user.password, function(err,result){
+              if(err){
+                  res.json({
+                      error: err
+                  })
+              }
+              if(result){
+                  let token = jwt.sign({name:user.name}, 'verySecretValue', {expiresIn:'1h'})
+                  res.json({
+                      message: 'Login Successful!',
+                      token
+                  })
+              }else{
+                  res.json({
+                      message: 'Password does not match'
+                  })
+              }
+          })
+      }else{
+          res.json({
+              message: 'No user found!'
+          })
+      }
   })
+})
+
+
 
 
 module.exports = router;

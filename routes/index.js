@@ -1,6 +1,8 @@
 //Paste in routes/index.js
 const mongoose = require('mongoose')
-const Employee = mongoose.model("Employee")
+const User = mongoose.model("User")
+const bcrypt = require('bcryptjs')
+
 var express = require('express');
 var router = express.Router();
 
@@ -10,30 +12,44 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.post('/', (req, res) => {
-  const username = req.body.username;
-  const email = req.body.email;
-  const phonenumber = req.body.phonenumber;
-  const password = req.body.password;
 
-  console.log(username+email+phonenumber+password)
+   const username = req.body.username;
+   const email = req.body.email;
+   const phonenumber = req.body.phonenumber;
+   const password = req.body.password;
 
-  const employee = new Employee({
-    username,
-    email,
-    phonenumber,
-    password
-  })
 
-  employee.save()
-  .then(result => () => {
-    console.log(result)
-    res.json(result)
-  })
-  
-  res.redirect('/');
-  res.end();
+   bcrypt.hash(req.body.password, 10, function(err,hashedPass){
+    if(err){
+        res.json({
+            error : err
+        })
+    }
+
+    let user = new User ({
+        username : req.body.username,
+        email : req.body.email,
+        phonenumber : req.body.phonenumber,
+        password : hashedPass
+    })
+    user.save()
+    .then(user => {
+       res.json({
+        message: 'User Added Successfully!'
+       })
+    })
+    .catch(err => {
+        res.json({
+            message: 'An error occured!'
+        })
+    })
+    res.redirect('/')
+    res.end
 
 })
+    
+     
+  })
 
 
 module.exports = router;
